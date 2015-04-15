@@ -27,7 +27,6 @@
                 </div> <!-- /.container -->
            <!--  </div> -->  <!-- /.big-footer -->
             <!-- Copyright section -->
-            <br><br>
             <div class="small-footer">
                <div class="copyright background-blue">
                     <p class="aligncenter no-margin">Copyright &copy; 2014 Kendyson.  <a href="http://kendyson.com/" target="_blank">Developed By Kendyson</a></p>

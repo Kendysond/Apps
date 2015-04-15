@@ -1434,7 +1434,7 @@ section hr{
 .section-dishes .content-sliders li figcaption a{
     display: block;
     font-family: "Montserrat";
-    font-size: 11px;
+    font-size: 15px;
     line-height: 14px;
     text-transform: uppercase;
     color: #f26c22;
@@ -3330,3 +3330,10 @@ html.swipebox-html.swipebox-touch {
 
 /* =======================================================================================
    ===================================    MEDIA QUERIES ==================================  */
+
+
+
+
+   .dish-title{
+    font-size: 20px;
+   }

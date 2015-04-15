@@ -58,7 +58,7 @@
                         <nav class="main-nav to-right responsive-nav"> <!-- .mega-menu helper class ued as switcher -->
                             <ul class="clean-list clearfix "> <!-- .to-right, to-left, .center-me helper class-->
                                 <li class="current-menu-item ">
-                                    <a href="contact.html">Add Your Recipe</a>
+                                    <a href="<?= base_url('add');?>">Add Your Recipe</a>
                                 </li>
                             </ul>
                         </nav><!-- /.main-nav -->

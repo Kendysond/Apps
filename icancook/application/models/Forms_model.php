@@ -79,8 +79,8 @@ class Forms_model extends CI_Model {
 		$this->db->update($table,$changes,$where);
 		return $this->db->affected_rows();
 	}
-	public function no_rows($table,$data){
-		$q = $this->db->get_where($table,$data);
+	public function no_rows($table,$where){
+		$q = $this->db->get_where($table,$where);
 		return $q->num_rows();
 	}
 	public function distinct_where($what,$table,$id){
@@ -111,7 +111,7 @@ class Forms_model extends CI_Model {
 		$this->db->select_max($value);
 		$query = $this->db->get_where($table,$where);
 		foreach ($query->result() as $row) {
-           echo $result = @$row->$value;
+           $result = @$row->$value;
         }
         return $result;
 	}

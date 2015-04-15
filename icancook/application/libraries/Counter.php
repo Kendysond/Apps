@@ -49,12 +49,24 @@ class Counter {
 			$lastvisit = $CI->forms_model->get_max_value('views',$check,'at');
 			$timecheck = $lastvisit + $after;
 			if ($time > $timecheck) {
-				$student_id = $CI->forms_model->insert_array('views',$insert);
+				$inserted = $CI->forms_model->insert_array('views',$insert);
 			}
 			
 		}else{
-			$student_id = $CI->forms_model->insert_array('views',$insert);
+			$inserted = $CI->forms_model->insert_array('views',$insert);
 		
 		}
+
+		$where = [ 'procedure_id' => $id ];
+		$views = $CI->forms_model->no_rows('views',$where);
+		
+		return $views;
+	}
+	public function views($id){
+		$CI = &get_instance();
+		$where = [ 'procedure_id' => $id ];
+		$views = $CI->forms_model->no_rows('views',$where);
+		
+		return $views;
 	}
 }

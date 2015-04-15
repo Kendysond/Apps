@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Add extends CI_Controller {
+class Dish extends CI_Controller {
 
 	/**
 	 * KENDYSON
@@ -15,16 +15,28 @@ class Add extends CI_Controller {
 	 * @link	http://kendyson.com
 	 * @since	Version 1.0.0
 	 */
-	public function __construct(){
-		parent::__construct();
+	public function index($id = null){
+		$this->load->view('user/inc/header_view');
 		
-	}
+		if ($id == null) {
+		$this->load->view('user/home_view');
+		
+		}else{
+			echo "Custom Page";
+		}
 
-	public function index()
+		$this->load->view('user/inc/footer_view');
+	}
+	public function add()
 	{	
-		$data['views'] = $this->counter->log('1111');
 		$this->load->view('user/inc/header_view');
 		$this->load->view('user/addprocedure_view');
+		$this->load->view('user/inc/footer_view');
+	}
+	public function error()
+	{	
+		$this->load->view('user/inc/header_view');
+		$this->load->view('user/404_view');
 		$this->load->view('user/inc/footer_view');
 	}
 }
