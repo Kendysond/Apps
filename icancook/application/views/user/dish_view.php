@@ -1,3 +1,5 @@
+<title>How to prepare <?= $dish->name;?> | #iCanCook </title>
+    
 <section class="wood-background recipe-content">
     <div class="container ">
         <div class="background-white margin-top-60 margin-bottom-120">
@@ -5,7 +7,7 @@
                 <figure>
                     <br>
                     <figcaption>
-                        <h2 class="entry-title aligncenter margin-top-60">Grilled Chicken Legs</h2>
+                        <h2 class="entry-title aligncenter margin-top-60"><?= $dish->name;?></h2>
                     </figcaption>
                 </figure>
             </header>
@@ -14,22 +16,29 @@
                 <div class="col-md-9 no-padding">
                     <div class="entry-content padding padding-double">
                         <h3 class="entry-title">Description</h3>
-                        <p>
-                           1. Combine 1 tablespoon soy sauce, sherry, 2 teaspoons cornstarch, and chicken in a large bowl; toss well to coat. Combine remaining 2 tablespoons soy sauce, remaining 2 teaspoons cornstarch, broth, oyster sauce, and honey in a small bowl.     
-                        </p>
-                        <p>
-                            <img src="images/chicken-recipe.jpg" alt="Grilled Chicken Legs" />
-                        </p>
-                        <p>
-                            A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment       
-                        </p>
-                        <p>
-                            2. Heat 1 teaspoon oil in a large nonstick skillet over medium-high heat. Add chicken mixture to pan; sauté 3 minutes. Remove from pan. Heat remaining 1 teaspoon oil in pan. Add onion, celery, and bell pepper to pan; sauté 2 minutes. Add ginger and garlic; sauté 1 minute. Return chicken mixture to pan; sauté 1 minute. Stir in broth mixture. Bring to a boil; cook 1 minute, stirring constantly. Remove from heat. Sprinkle with green onions and cashews.
-                        </p>
-                        <p>
-                            Rice pilaf: Heat 1 tablespoon canola oil in a large saucepan over medium-high heat. Add 1/2 cup chopped onion and 2 teaspoons grated peeled fresh ginger to pan; sauté 2 minutes. Stir in 1 cup water, 1/2 cup long-grain rice, and 1/4 teaspoon salt; bring to a boil. Cover, reduce heat, and simmer 12 minutes or until liquid is absorbed. Remove from heat; stir in 2 tablespoons chopped fresh cilantro.
-                        </p>
+                        <?= $dish->procedures;?>
+                        <header style="color:#78add6;">
+                            <div class="header-meta row no-margin">
+                                <div class="col-md-2 col-sm-2 col-xs-2">
+                                    <span class="date center-me pre-line aligncenter margin-half-top ">
+                                        <?= $views ;?> &nbsp;
+                                        View(s)
+                                    </span>
+                                </div>
+                                <div class="col-md-10 col-sm-10 col-xs-10 left-date">
+                                    <h2 class="entry-title" style="color:#78add6;"><?= $dish->fullname;?></h2>
+                                    <ul class="clean-list post-meta-list border-top row">
+                                        <li class="no-padding">
+                                            <a href="#" class="meta-link comments"> &nbsp; <?= $dish->state;?></a> /
+                                            <a class="text-red hover-text-dark-red author" href="#"><?= $dish->lga;?></a> 
+                                            
 
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </header>
                         <div class="clean-list share-links padding-top share-socials border-top clearfix">
                             <ul class="clean-list socials inline">
                                 <li>
@@ -53,7 +62,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="comments-wrap background-white">
+                    <!-- <div class="comments-wrap background-white">
                         <div class="comments-area comments-block">
                             <h4 class="entry-title border-bottom padding-double-top">2 comments</h4>
                             <div id="respond" class="comment-respond">
@@ -86,7 +95,7 @@
                                 <ul class="comment-list clean-list border-top margin-top-100 padding-top">
                                     <li>
                                         <div class="tt-comment">
-                                            <span class="tt-avatar"><img src="images/avatar64x64.jpg" alt="Avatar" /></span>
+                                            <span class="tt-avatar"><img src="<?= base_url(); ?>assets/images/avatar64x64.jpg" alt="Avatar" /></span>
                                             <div class="comment-block">
                                                 <div class="comment-meta">
                                                     John Doe
@@ -107,7 +116,7 @@
                                         <ul class="children">
                                             <li class="comment comment-author-tesla odd alt depth-2">
                                                 <div class="tt-comment">
-                                                    <span class="tt-avatar"><img src="images/avatar64x64.jpg" alt="Avatar" /></span>
+                                                    <span class="tt-avatar"><img src="<?= base_url(); ?>assets/images/avatar64x64.jpg" alt="Avatar" /></span>
                                                     <div class="comment-block">
                                                         <div class="comment-meta">
                                                             John Doe
@@ -131,70 +140,22 @@
                                 </ul>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="col-md-3 no-padding">
                     <div class="aside background-white">
-                        <div class="recipe-block border padding margin-top-100">
-                            <h3 class="entry-title margin-left padding-bottom">Ingridients</h3>    
-                            <ol class="clean-list recipe-list margin-left">
-                                <li>beef - 500gr</li>
-                                <li>noodles - 150 gr</li>
-                                <li>carrots - 1</li>
-                                <li>onions - 2</li>
-                                <li>celery - 100 gr</li>
-                                <li>tomatoes - 2</li>
-                                <li>salt</li>
-                                 <li>pepper</li>
-                                <li>basil</li>
+                        <div class="recipe-block border padding margin-top-100" >
+                            <h3 class="entry-title margin-left padding-bottom" >Ingridients</h3>    
+                            <ol class="clean-list recipe-list margin-left" >
+                                <?php if (!empty($dish->ingris) ) { 
+                                       foreach($dish->ingris as $i => $ingridient){
+                                ?>
+                                   <li><?= $ingridient; ?></li>
+                             <?php }} ?>
+                                
+                               
+
                             </ol>
-                        </div>
-                        <div class="most-popular ">
-                            <h3 class="entry-title margin-double-top">Most Popular</h3>
-                            <ul class="clean-list">
-                                <li>
-                                    <div class="row">
-                                        <div class="col-md-5">
-                                            <figure>
-                                                <a href="#">
-                                                    <img src="images/popular/barbecue-salmon.jpg" alt="Barbecue from salmon with vegetables" />
-                                                </a>
-                                            </figure>
-                                        </div> 
-                                        <div class="col-md-7">
-                                            <h4 class="entry-title"><a href="#">Barbecue from salmon with vegetables</a></h4>
-                                        </div> 
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="row">
-                                        <div class="col-md-5">
-                                            <figure>
-                                                <a href="#">
-                                                    <img src="images/popular/cookies-with-honey.jpg" alt="Cookies with honey cream and bananas" />
-                                                </a>
-                                            </figure>
-                                        </div> 
-                                        <div class="col-md-7">
-                                            <h4 class="entry-title"><a href="#">Cookies with honey cream and bananas</a></h4>
-                                        </div> 
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="row">
-                                        <div class="col-md-5">
-                                            <figure>
-                                                <a href="#">
-                                                    <img src="images/popular/barbecue-cassoulet.jpg" alt="Barbecue cassoulet" />
-                                                </a>
-                                            </figure>
-                                        </div> 
-                                        <div class="col-md-7">
-                                            <h4 class="entry-title"><a href="#">Barbecue cassoulet</a></h4>
-                                        </div> 
-                                    </div>
-                                </li>
-                            </ul>
                         </div>
                     </div>
                 </div>
@@ -214,5 +175,15 @@
         outline: medium none;
        // padding: 6px;
         width: 100%;
+    }
+    .no-margin{
+        border-top: 1px solid transparent;
+        border-left: 1px solid transparent;
+        border-right: 1px solid transparent;
+        border-color:#d1d1d1;
+    }
+    .left-date{
+        border-left: 1px solid transparent;
+        border-left-color:#d1d1d1;
     }
 </style>

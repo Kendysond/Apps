@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Downtown - Developed with love by TeslaThemes.com</title>
     <meta name="description" content="Great theme for creative people">
     <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Responsive helper -->
 
@@ -62,7 +61,7 @@
                     <div class="col-md-5 nav-wrap">
                         <nav class="main-nav to-right responsive-nav"> <!-- .mega-menu helper class ued as switcher -->
                             <ul class="clean-list clearfix "> <!-- .to-right, to-left, .center-me helper class-->
-                                <li class="current-menu-item ">
+                                <li class="">
                                     <a href="<?= base_url('add');?>">Add Your Recipe</a>
                                 </li>
                             </ul>

@@ -27,7 +27,6 @@
                         <label class="control-label">State</label>
                         <div class="input-cover contact-line">
                             <select id="state" name="state">
-                                <option value="">--Select--</option>
                                 <option value="ABIA">ABIA</option>
                                 <option value="ADAMAWA">ADAMAWA</option>
                                 <option value="AKWA IBOM">AKWA IBOM</option>

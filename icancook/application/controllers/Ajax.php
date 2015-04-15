@@ -37,13 +37,14 @@ class Ajax extends CI_Controller {
 		$data = $this->input->post();
 		
 		if ($data['email'] != "" && valid_email($data['email'])){
-		   	$email = ['email' => $data['email']];
-		   	$result = $this->forms_model->exist_array('emails',$email);
+		   	$emailcheck = ['email' => $data['email']];
+		   	$emaildata = ['email' => $data['email'],'gender' => $data['gender']];
+		   	$result = $this->forms_model->exist_array('emails',$emailcheck);
 
 		   	if ($result > 0) {
 		   	 
 		   	}else{
-		      $result = $this->forms_model->insert_array('emails',$email);
+		      $result = $this->forms_model->insert_array('emails',$emaildata);
 			}
 		}elseif ($data['email'] != "" && !valid_email($data['email'])) {
 			$this->output->set_output(json_encode(['result' => 'emailerror']));
@@ -59,11 +60,10 @@ class Ajax extends CI_Controller {
 		$insert['email'] = @mysql_real_escape_string($data['email']);
 		$insert['gender'] = @mysql_real_escape_string($data['gender']);
 		$insert['id'] = $this->generate_id();
-		$email = ['email' => $insert['email']];
-
-		//$result = $this->forms_model->insert_array('dishes',$insert);
 		
-		//$this->output->set_output(json_encode([ 'result' => 'success','id' => $insert['id']]));
+		$result = $this->forms_model->insert_array('dishes',$insert);
+		
+		$this->output->set_output(json_encode([ 'result' => 'success','id' => $insert['id']]));
 		return false;
 	}
 
