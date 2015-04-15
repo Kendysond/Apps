@@ -23,10 +23,15 @@
     <link href='http://fonts.googleapis.com/css?family=Grand+Hotel' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700'  rel='stylesheet' type='text/css'>
     -->
+    <link href="<?= base_url(); ?>assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
     <link rel="stylesheet" href="<?= base_url(); ?>assets/css/bootstrap.css">
     <link rel="stylesheet" href="<?= base_url(); ?>assets/css/screen.css">
 
     <script src="<?= base_url(); ?>assets/js/modernizr.js"></script>
+    <script src="<?= base_url(); ?>assets/js/jquery.js"></script>
+    <script src="<?= base_url(); ?>assets/js/bootstrap.js"></script>
+    
 </head>
 <body>
     <div class="page-content show-content">
@@ -37,7 +42,7 @@
                         <nav class="main-nav to-left responsive-nav"> <!-- .mega-menu helper class ued as switcher -->
                             <ul class="clean-list clearfix "> <!-- .to-right, to-left, .center-me helper class-->
                                 <li class="">
-                                    <a href="index.html">Home</a>
+                                    <a href="<?= base_url();?>">Home</a>
                                 </li>
                             </ul>
                         </nav><!-- /.main-nav -->

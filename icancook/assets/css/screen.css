@@ -239,7 +239,9 @@ iframe{
 .background-orange{
     background-color: #f26c22;
 }
-
+.background-red{
+    background-color: red;
+}
 [class*="shape-"] {
     display: block;
     overflow: hidden;
@@ -2168,6 +2170,42 @@ section hr{
     color: #fff;
 }
 
+
+
+
+
+.comment-respond input[type="email"],
+.comment-respond textarea,
+.contact-form input[type="email"],
+.contact-form textarea,
+.booking-form input[type="email"],
+.booking-form textarea,
+.booking-form select{
+    font-family: "Montserrat";
+    font-size: 14px;
+    font-weight: normal;
+    color: #6f6f6f;
+}
+
+.comment-respond input[type="email"],
+.comment-respond textarea,
+.contact-form input[type="email"],
+.contact-form textarea,
+.booking-form input[type="email"],
+.booking-form textarea{
+    width: 100%;
+    border: 2px solid #d1d1d1;
+    
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.contact-form input[type="email"]{
+    margin-bottom: 20px;
+}
+
 /*   ========================= Form  */
 
 /*   ========================= Booking Form  */
@@ -2177,7 +2215,7 @@ section hr{
     padding: 0 6px !important;
 }
 
-.booking-form  input[type="text"],
+.booking-form  input[type="text"],.booking-form  input[type="email"],
 .booking-form  select{
     margin-top: 20px;
 }

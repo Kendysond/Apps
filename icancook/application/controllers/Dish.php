@@ -19,18 +19,12 @@ class Dish extends CI_Controller {
 		$this->load->view('user/inc/header_view');
 		
 		if ($id == null) {
-		$this->load->view('user/home_view');
-		
+			$this->load->view('user/home_view');
 		}else{
-			echo "Custom Page";
+			$this->load->view('user/dish_view');
+		
 		}
 
-		$this->load->view('user/inc/footer_view');
-	}
-	public function add()
-	{	
-		$this->load->view('user/inc/header_view');
-		$this->load->view('user/addprocedure_view');
 		$this->load->view('user/inc/footer_view');
 	}
 	public function error()

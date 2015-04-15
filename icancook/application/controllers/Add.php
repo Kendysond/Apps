@@ -24,7 +24,7 @@ class Add extends CI_Controller {
 	{	
 		$data['views'] = $this->counter->log('1111');
 		$this->load->view('user/inc/header_view');
-		$this->load->view('user/addprocedure_view');
+		$this->load->view('user/adddish_view');
 		$this->load->view('user/inc/footer_view');
 	}
 }

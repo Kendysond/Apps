@@ -14,17 +14,19 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Formsclass {
-	public function generate_id($user){
+	public function generate_id(){
 		$CI = &get_instance();
 		$CI->load->model('forms_model');
   		//
   		$tablename = $user."ids";
-		
-		$sql = "SELECT * FROM $tablename ORDER BY id DESC LIMIT 1";
+		$prefix = 'ds';
+		//
+		$sql = "SELECT * FROM `ids`ORDER BY id DESC LIMIT 1";
   		$lastsuffix = $CI->forms_model->sql_get_value($sql,'ids');
-  		$newid = $lastsuffix + 1;
-  		$data = ['ids' => $newid];
-		$result = $CI->forms_model->insert_array($tablename,$data);
+  		$suffix = $lastsuffix + 1;
+  		$newid = $prefix.$suffix;
+  		$data = ['ids' => $suffix ];
+		$result = $CI->forms_model->insert_array('ids',$data);
 		
 		return $newid;
 	}
