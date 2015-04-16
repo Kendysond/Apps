@@ -3353,13 +3353,25 @@ html.swipebox-html.swipebox-touch {
     body .mobile-menu-button {
         right: 5%;
       }
+      .bottom-date{
+        border-bottom: 1px solid transparent;
+        border-bottom-color:#d1d1d1;
+    }
 }
 
 @media (max-width: 580px) {
     .post-content header .date{
         white-space: nowrap;
     }
-
+    .booking-form{
+      margin-left: -100px;
+      margin-right: -100px;
+     
+    }
+    .bottom-date{
+        border-bottom: 1px solid transparent;
+        border-bottom-color:#d1d1d1;
+    }
     .post-content .header-meta > div{
         width: 100%;
     }

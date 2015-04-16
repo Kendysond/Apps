@@ -41,7 +41,9 @@
                         <nav class="main-nav to-left responsive-nav"> <!-- .mega-menu helper class ued as switcher -->
                             <ul class="clean-list clearfix "> <!-- .to-right, to-left, .center-me helper class-->
                                 <li class="">
-                                    <a href="<?= base_url();?>">Home</a>
+                                    <a href="<?= base_url();?>">Home</a><br>
+                                    <div class="fb-like" data-href="https://facebook.com/kendysonco" data-layout="button" data-action="like" data-show-faces="false" data-share="true"></div>
+                        
                                 </li>
                             </ul>
                         </nav><!-- /.main-nav -->
@@ -50,11 +52,12 @@
                     <div class="col-md-2 ">
                         <div class="logo aligncenter">
                             <div class="identity">
-                                <a href="index.html" title="home" rel="home">
-                                    <img src="<?= base_url(); ?>assets/images/icc.png" alt="Downtown theme logo">
+                                <a href="<?= base_url(); ?>" title="home" rel="home">
+                                    <img src="<?= base_url(); ?>assets/images/icc.png" alt="#ICanCook">
                                 </a>
-                            </div>
-                        </div>
+                                
+                         </div>
+                         </div>
                         <div class="menu-button alignleft"></div>
                     </div>
 
@@ -63,6 +66,14 @@
                             <ul class="clean-list clearfix "> <!-- .to-right, to-left, .center-me helper class-->
                                 <li class="">
                                     <a href="<?= base_url('add');?>">Add Your Recipe</a>
+                                    <a class="twitter-follow-button"
+                                      href="https://twitter.com/kendysond"
+                                      data-show-count="false"
+                                      data-lang="en">
+                                    Follow Us
+                                    </a>
+                                    <script>window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));</script>
+                           
                                 </li>
                             </ul>
                         </nav><!-- /.main-nav -->

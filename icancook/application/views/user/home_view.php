@@ -1,3 +1,6 @@
+
+<title> Home of different ways to prepare a meal | #iCanCook </title>
+
 <section class="section section-services">
     <div class="container">
         <header class="entry-header aligncenter section-header section-services-header margin-top-60">

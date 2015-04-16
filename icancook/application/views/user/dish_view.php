@@ -1,4 +1,4 @@
-<title>How to prepare <?= $dish->name;?> | #iCanCook </title>
+<title>How to prepare <?= $dish->name;?> | #iCanCook | Kendyson.com </title>
     
 <section class="wood-background recipe-content">
     <div class="container ">
@@ -19,13 +19,13 @@
                         <?= $dish->procedures;?>
                         <header style="color:#78add6;">
                             <div class="header-meta row no-margin">
-                                <div class="col-md-2 col-sm-2 col-xs-2">
+                                <div class="col-md-2 col-sm-2 col-xs-12 bottom-date">
                                     <span class="date center-me pre-line aligncenter margin-half-top ">
                                         <?= $views ;?> &nbsp;
                                         View(s)
                                     </span>
                                 </div>
-                                <div class="col-md-10 col-sm-10 col-xs-10 left-date">
+                                <div class="col-md-10 col-sm-10 col-xs-12 left-date">
                                     <h2 class="entry-title" style="color:#78add6;"><?= $dish->fullname;?></h2>
                                     <ul class="clean-list post-meta-list border-top row">
                                         <li class="no-padding">
@@ -40,7 +40,7 @@
                             </div>
                         </header>
                         <div class="clean-list share-links padding-top share-socials border-top clearfix">
-                            <ul class="clean-list socials inline">
+                           <!--  <ul class="clean-list socials inline">
                                 <li>
                                     <a href="#">
                                         <span class="st_facebook_large">
@@ -59,8 +59,13 @@
                                         </span>
                                     </a>
                                 </li>
-                            </ul>
+                            </ul> -->
+                            <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                            <div class="addthis_native_toolbox" ></div>
+                          
                         </div>
+                        <br>
+                        <br>
                     </div>
                     <!-- <div class="comments-wrap background-white">
                         <div class="comments-area comments-block">
@@ -158,6 +163,7 @@
                             </ol>
                         </div>
                     </div>
+                    <br> <br>
                 </div>
             </div>
         </div>
@@ -182,8 +188,11 @@
         border-right: 1px solid transparent;
         border-color:#d1d1d1;
     }
+    
     .left-date{
+        border-top: 1px solid transparent;
         border-left: 1px solid transparent;
         border-left-color:#d1d1d1;
     }
 </style>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52f3ef7b6b0efca7" async="async"></script>

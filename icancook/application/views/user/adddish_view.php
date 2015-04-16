@@ -1,3 +1,5 @@
+
+<title> Add your technique | #iCanCook </title>
 <section class="booking">
     <div class="container ">
         <header class="entry-header aligncenter section-header section-contact-header margin-top padding-top">
@@ -12,18 +14,18 @@
         <div class="booking-form-wrap padding">
             <h3 class="entry-title">Details</h3><hr />
 
-             <form class="tt-form booking-form margin-top padding-top add_dish"  action="<?= base_url('ajax/add_dish');?>" method="POST" >
+             <form class="tt-form booking-form margin-top padding-top add_dish"  action="<?= base_url('ajax/add_dish');?>" method="POST">
  
                 <div class="row form-row"><!-- Start Row -->
 
-                    <div class="col-md-8 column no-padding"><!-- Start Column -->
+                    <div class="col-md-8 col-xs-12 column no-padding"><!-- Start Column -->
                         <label class="control-label">Name Of Dish</label>
                         <div class="input-cover contact-line">
                             <input type="text" class="contact-form-line" value="" placeholder="Name" name="name" required>
                         </div>
                     </div><!-- End Column -->
                      
-                    <div class="col-md-2 column no-padding">
+                    <div class="col-md-2 col-xs-12 column no-padding">
                         <label class="control-label">State</label>
                         <div class="input-cover contact-line">
                             <select id="state" name="state">
@@ -68,7 +70,7 @@
                         </div>                                                                    
                     </div>
 
-                    <div class="col-md-2 column no-padding">
+                    <div class="col-md-2 col-xs-12 column no-padding">
                         <label class="control-label">L.G.A</label>
                         <div class="input-cover contact-line">
                             <select id="lga" name="lga">
@@ -851,7 +853,7 @@
                 </div>
 
                 <div class="row form-row"><!-- Start Row -->
-                        <div class="col-md-12 column no-padding"><!-- Start Column -->
+                        <div class="col-md-12 col-xs-12 column no-padding"><!-- Start Column -->
                             <label class="control-label">Ingredients</label>
                             <div class="input-cover contact-line">
                                 <input type="text" class="contact-form-line" value="" placeholder="ingredients" name="ingredients" required>
@@ -861,7 +863,7 @@
 
                 </div>
                 <div class="row form-row"><!-- Start Row -->
-                    <div class="col-md-12 column"><!-- Start Column -->
+                    <div class="col-md-12 col-xs-12 column"><!-- Start Column -->
                         <label class="control-label">Tell us how to Make it</label>
                         <div class="input-cover input-cover-text">
                             <textarea class="wysihtml5 form-control" rows="6" name="procedures" data-error-container="#editor1_error" required></textarea>
@@ -873,12 +875,12 @@
                 
                 <h3 class="entry-title">A bit about you </h3><hr />
                 <div class="row form-row"><!-- Start Row -->
-                        <div class="col-md-6 column"><!-- Start Column -->
+                        <div class="col-md-6 col-xs-12 column"><!-- Start Column -->
                             <div class="input-cover contact-line">
                                 <input type="text" class="contact-form-line"  placeholder="Full Name" name="fullname" required>
                             </div>
                         </div>
-                        <div class="col-md-2 column  no-padding">
+                        <div class="col-md-2 col-xs-12 column  no-padding">
                             <div class="input-cover contact-line">
                                 <select  name="gender">
                                     <option value="Female">Female</option>
@@ -886,7 +888,7 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="col-md-4 column"><!-- Start Column -->
+                        <div class="col-md-4 col-xs-12 column"><!-- Start Column -->
                             <div class="input-cover contact-line">
                                 <input type="email" class="contact-form-line"  placeholder="E-Mail" name="email">
                                 <p class="help-block background-red" style="color:#FFF;display:none;"> &nbsp;Email Format Wrong</p>

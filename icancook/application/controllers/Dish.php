@@ -20,6 +20,7 @@ class Dish extends CI_Controller {
 		
 		$id = $this->uri->segment(2);
 		if ($id == null) {
+			$data['views'] = $this->counter->log(1083);
 			
 			$data['dishes'] = $this->statsclass->dishes();
 			$this->load->view('user/home_view',$data);
@@ -35,6 +36,31 @@ class Dish extends CI_Controller {
 			}else{
 				$data['views'] = $this->counter->log($id);
 				$this->load->view('user/dish_view',$data);
+			}
+			
+		}
+		$this->load->view('user/inc/footer_view');
+	}
+	public function share(){
+		$this->load->view('user/inc/header_view');
+		
+		$id = $this->uri->segment(2);
+		if ($id == null) {
+			
+			$data['dishes'] = $this->statsclass->dishes();
+			$this->load->view('user/home_view',$data);
+
+
+		}else{
+			$params = ['id' => $id];
+            $this->load->library('obj/Dishobj',$params ,'DSH');
+            $data['dish'] = new $this->DSH($params);
+
+            if ($data['dish']->dish_id == "") {
+            	$this->load->view('user/404_view');
+			}else{
+				$data['views'] = $this->counter->log($id);
+				$this->load->view('user/sharedish_view',$data);
 			}
 			
 		}

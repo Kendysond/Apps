@@ -16,7 +16,9 @@ class Home extends CI_Controller {
 	 * @since	Version 1.0.0
 	 */
 	public function index()
-	{
+	{	
+		$data['views'] = $this->counter->log(0000122);
+				
 		$this->load->view('user/inc/header_view');
 		$this->load->view('user/home_view');
 		$this->load->view('user/inc/footer_view');
