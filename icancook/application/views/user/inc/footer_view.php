@@ -29,21 +29,21 @@
             <!-- Copyright section -->
             <div class="small-footer">
                <div class="copyright background-blue">
-                    <p class="aligncenter no-margin">Copyright &copy; 2014 Kendyson.  <a href="http://kendyson.com/" target="_blank">Developed By Kendyson</a></p>
+                    <p class="aligncenter no-margin">Copyright &copy; 2014 Kendyson.  <a href="http://kendyson.com/" target="_blank">Developed By Kendyson</a> |  <a href="http://kendyson.com/icancook/changelog" target="_blank">Changelog</a></p>
                 </div>
             </div><!-- / small footer -->
         </footer><!-- /.main-footer -->
     </div>
     
-    <!-- Scripts -->
+    <!-- Scripts 
     <script src="<?= base_url(); ?>assets/js/plugins.js"></script> 
-    <script src="<?= base_url(); ?>assets/js/options.js"></script>
+    <script src="<?= base_url(); ?>assets/js/options.js"></script>  -->
 </body>
 </html>
 <script type="text/javascript">
    var mylist = $('#lga');
- var listitems = mylist.children().get();
- listitems.sort(function(a, b) {
+   var listitems = mylist.children().get();
+   listitems.sort(function(a, b) {
     var compA = $(a).text().toUpperCase();
     var compB = $(b).text().toUpperCase();
     return (compA < compB) ? -1 : (compA > compB) ? 1 : 0;
@@ -51,20 +51,23 @@
  $.each(listitems, function(idx, itm) { mylist.append(itm); });
 </script>
 <script>
-  // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  // (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  // m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  // })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  // ga('create', 'UA-61899932-1', 'auto');
-  // ga('send', 'pageview');
+  ga('create', 'UA-61899932-1', 'auto');
+  ga('send', 'pageview');
 
 </script>
 <div id="fb-root"></div>
-<script>(function(d, s, id) {
+<script>
+(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
   js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3&appId=831836953514766";
   fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+}(document, 'script', 'facebook-jssdk'));
+
+</script>

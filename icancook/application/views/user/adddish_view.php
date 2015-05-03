@@ -866,9 +866,8 @@
                     <div class="col-md-12 col-xs-12 column"><!-- Start Column -->
                         <label class="control-label">Tell us how to Make it</label>
                         <div class="input-cover input-cover-text">
-                            <textarea class="wysihtml5 form-control" rows="6" name="procedures" data-error-container="#editor1_error" required></textarea>
-                            <div id="editor1_error">
-                            </div>
+                            <textarea id="redactor_content" class="createpost"name="procedures"><p>Create Post</p></textarea>
+                            <div id="editor1_error"> </div>
                         </div>                           
                     </div>
                 </div>
@@ -910,17 +909,10 @@
 
 
 
-<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>assets/bootstrap-wysihtml5/bootstrap-wysihtml5.css"/>
+<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>assets/css/redactor.css"/>
 
-<script type="text/javascript" src="<?= base_url(); ?>assets/bootstrap-wysihtml5/wysihtml5-0.3.0.js"></script>
-<script type="text/javascript" src="<?= base_url(); ?>assets/bootstrap-wysihtml5/bootstrap-wysihtml5.js"></script>
-<script type="text/javascript">
-    if ($('.wysihtml5').size() > 0) {
-        $('.wysihtml5').wysihtml5({
-            "stylesheets": ["<?= base_url(); ?>assets/bootstrap-wysihtml5/wysiwyg-color.css"]
-        });
-    }
-</script>
+<script type="text/javascript" src="<?= base_url(); ?>assets/js/redactor.js"></script>
+
 <style type="text/css">
     .btn.default {
         background-color: #e5e5e5;
@@ -939,7 +931,15 @@
     }
 </style>
 
-<script>
+<script type="text/javascript">
+   $(document).ready(function(){
+
+        $('#redactor_content').redactor({
+            imageUpload: "<?php echo base_url(); ?>ajax/simple_upload"
+            
+        });
+    }); 
+
     $('.add_dish').submit(function (e) {
         $('.background-red').hide();
         e.preventDefault();

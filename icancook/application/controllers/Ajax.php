@@ -55,7 +55,9 @@ class Ajax extends CI_Controller {
 		$insert['state'] = @mysql_real_escape_string($data['state']);
 		$insert['lga'] = @mysql_real_escape_string($data['lga']);
 		$insert['ingredients'] = @mysql_real_escape_string($data['ingredients']);
-		$insert['procedures'] = @mysql_real_escape_string($data['procedures']);
+		
+		$insert['procedures'] = base64_encode($data['procedures']);
+
 		$insert['fullname'] = @mysql_real_escape_string($data['fullname']);
 		$insert['email'] = @mysql_real_escape_string($data['email']);
 		$insert['gender'] = @mysql_real_escape_string($data['gender']);
@@ -67,8 +69,39 @@ class Ajax extends CI_Controller {
 		return false;
 	}
 
+	function simple_upload() {
+	   $config = array(
+	   	'upload_path' => './images/',
+        'upload_url' => './images/',
+        'allowed_types' => 'jpg|gif|png',
+        'overwrite' => false,
+        'max_size' => 512000,            
+	    );
+	   $config['encrypt_name'] = TRUE;
+ 
+	    $this->load->library('upload', $config);
 
+	    if ($this->upload->do_upload('file')) {
+	        $data = $this->upload->data();
+	        $array = array(
+	            'filelink' => $config['upload_url'] . $data['file_name']
+	        );            
+	        echo stripslashes(json_encode($array));
+	    } else {
+	        echo json_encode(array('error' => $this->upload->display_errors('', '')));
+	    }
+	}
+	function delete_upload() {
+	   
+	   $path = $_POST['url'];
 
+	     // $path = .$filename ;
+	      if(is_file($path)){
+	        unlink($path);
+	      } else {
+	      }
+	}
+ 
 
 
 

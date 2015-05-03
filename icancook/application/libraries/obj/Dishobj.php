@@ -31,6 +31,7 @@ class Dishobj {
             foreach ($details[0] as $key => $value) {
             	$this->$key = $value;
             }
+            $this->procedures = base64_decode($this->procedures);
             $this->ingris = explode(',', $this->ingredients);
         }
   	}

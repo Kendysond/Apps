@@ -12,7 +12,7 @@
 
     <!-- For IE -->
     <!--[if IE]><link rel="shortcut icon" href="img/favicon/favicon.ico"><![endif]--> <!-- 16x16 -->
-
+    <base href="http://localhost/icancook/"/>
     <!-- For Mobile Windows -->
     <meta name="msapplication-TileColor" content="#D83434">
     <meta name="msapplication-TileImage" content="img/favicon/favicon.png"> <!-- 32x32 or 64x64 -->
