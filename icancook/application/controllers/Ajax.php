@@ -51,16 +51,14 @@ class Ajax extends CI_Controller {
 			return false;
 		}
 
-		$insert['name'] = @mysql_real_escape_string($data['name']);
-		$insert['state'] = @mysql_real_escape_string($data['state']);
-		$insert['lga'] = @mysql_real_escape_string($data['lga']);
-		$insert['ingredients'] = @mysql_real_escape_string($data['ingredients']);
-		
+		$insert['name'] = $data['name'];
+		$insert['state'] = $data['state'];
+		$insert['lga'] = $data['lga'];
+		$insert['ingredients'] = $data['ingredients'];
 		$insert['procedures'] = base64_encode($data['procedures']);
-
-		$insert['fullname'] = @mysql_real_escape_string($data['fullname']);
-		$insert['email'] = @mysql_real_escape_string($data['email']);
-		$insert['gender'] = @mysql_real_escape_string($data['gender']);
+		$insert['fullname'] = $data['fullname'];
+		$insert['email'] = $data['email'];
+		$insert['gender'] = $data['gender'];
 		$insert['id'] = $this->generate_id();
 		
 		$result = $this->forms_model->insert_array('dishes',$insert);

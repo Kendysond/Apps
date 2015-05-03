@@ -15,6 +15,12 @@
             <div class="row no-margin padding-right">
                 <div class="col-md-12 no-padding">
                     <div class="entry-content padding padding-double">
+                        <h3 class="entry-title">V1.0.2 - 06|03|2015</h3>
+                        <p>
+                            <ul>
+                                <li> Fixed Views Counter.</li>
+                            </ul>   
+                        </p>
                         <h3 class="entry-title">V1.0.1 - 06|02|2015</h3>
                         <p>
                             <ul>

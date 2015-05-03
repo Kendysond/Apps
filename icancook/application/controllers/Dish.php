@@ -29,12 +29,12 @@ class Dish extends CI_Controller {
 		}else{
 			$params = ['id' => $id];
             $this->load->library('obj/Dishobj',$params ,'DSH');
-            $data['dish'] = new $this->DSH($params);
-
+            $dish = new $this->DSH($params);
+            $data['dish'] = $dish;
             if ($data['dish']->dish_id == "") {
             	$this->load->view('user/404_view');
 			}else{
-				$data['views'] = $this->counter->log($id);
+				$data['views'] = $this->counter->log($dish->dish_id);
 				$this->load->view('user/dish_view',$data);
 			}
 			
